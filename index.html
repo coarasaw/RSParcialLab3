@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lab III Segundo Parcial REC SEG - Coarasa</title>
+
+        <link rel="stylesheet" type="text/css" href="./css/jsonEstilos.css">
+        <script src="./clases/Persona.js"></script>
+        <script src="./clases/Empleado.js"></script>
+        <script src="./clases/FuncionesHtnl.js"></script>
+    </head>
+    <body>
+        <!-- Selección Persona -->
+        <div class="contenedorTitulo">
+            <div class="tituloH2" >
+                <h2>Persona</h2>
+            </div>
+            <div class="Seleccion1">
+                <button id="btnAbrirCliente" onclick="abrirCliente();">Empleado</button>
+            </div>
+           
+            <div class="Seleccion1">   
+                <button id="btnLimpiar" onclick="Limpiar();">Mostrar</button>
+            </div>
+           
+            <div class="contenedorBuscador">
+                <h2>Filtar</h2>
+            </div>
+            <div class="flex1">
+                <select id="TurnoFiltro" name="TurnoFiltro" >
+                    <option value="Todos" selected>Todos</option>
+                    <option value="Mañana">Mañana</option>
+                    <option value="Tarde">Tarde</option>
+                    <option value="Noche">Noche</option>
+                </select>
+                
+            </div>
+            <div>
+                <input type="text" name="promedio" id="txtPromedio" class="filtrados" disabled> 
+            </div>
+            <div class="flex2">
+                <button id="btnPromedio" onclick="calcularPromedio();">Promedio</button>
+            </div>
+        </div>
+        <!-- FIN Selección Vehiculo --> 
+
+        <!-- Formulario de Persona -->
+        <div id="contAgregarVehiculo" class="contenedor" hidden> <!-- hidden -->
+            <div class="bCerrar" id="contenedor1">
+                <div class="tituloH2" >
+                    <h2>Empleado</h2>
+                </div>
+                <div>
+                    <button id="btnCerrarVehiculo" class="cerrar" onclick="cerrarCliente();">x</button>
+                </div>
+            </div>
+            <br>
+            <!--
+            <label for="idFormulario">ID</label>
+            <input type="text" id="idFormulario" class="sinError" name="idFormulario" disabled ></input>
+            <br>
+            -->
+            <br>
+            <!-- <label for="legajoFormulario">Legajo</label><br>-->
+            <input type="number" id="legajoFormulario" class="sinError" name="legajoFormulario" placeholder="legajo ..." disabled></input>
+            <br>
+            <!-- <label for="nombreFormulario">Nombre</label>-->
+            <input type="text" id="nombreFormulario" class="sinError" name="nombreFormulario" placeholder="Nombre"></input>
+            <br>
+            <!-- <label for="apellidoFormulario">Apellido</label>-->
+            <input type="text" id="apellidoFormulario" class="sinError" name="apellidoFormulario" placeholder="Apellido"></input>
+            <br>
+            <!-- <label for="edadFormulario">Edad</label><br>-->
+            <input type="number" id="edadFormulario" class="sinError" name="edadFormulario" placeholder="Edad ..."></input>
+            <br>
+            
+
+            <label for="TurnoFormulario">Turno</label><br>
+            <br>
+            <select id="TurnoFormulario" name="TurnoFormulario" >
+                <option value="Mañana">Mañana</option>
+                <option value="Tarde">Tarde</option>
+                <option value="Noche">Noche</option>
+            </select>
+            <br>
+
+            <div id="contenedor2">
+                <button id="btnGuardarCliente" onclick="GuardarCliente();">Guardar</button>
+                <button id="btnLimpiarCliente" onclick="limpiarCliente();">Limpiar</button>
+            </div>
+        
+        </div> 
+        <!--Fin contenedor  -->
+
+        <!-- Filtro -->
+        <div>
+            <h2>Campos a Mostrar</h2>
+            <label for="idCheck">Legajo</label>
+            <input type="checkbox" id="idCheck" name="id" checked>
+
+            <label for="nombreCheck">Nombre</label>
+            <input type="checkbox" id="nombreCheck" name="nombre" checked>
+
+            <label for="apellidoCheck">Apellido</label>
+            <input type="checkbox" id="apellidoCheck" name="apellido" checked>
+
+            <label for="edadCheck">Edad</label>
+            <input type="checkbox" id="edadCheck" name="edad" checked>
+
+            <label for="turnoCheck">Turno</label>
+            <input type="checkbox" id="turnoCheck" name="turno" checked>
+        </div>
+        <hr>
+
+        <!-- Tabla Vehiculos -->
+        <div class="contenedorPrincipalTabla">
+            <div id = "TablaContenedor" class="contenedorTabla">
+                <h2>LISTA DE CLIENTES</h2>
+                <table id="tabla">
+                    <thead>
+                        <th name="idTabla">Legajo</th>
+                        <th name="nombreTabla">Nombre</th>
+                        <th name="apellidoTabla">Apellido</th>
+                        <th name="edadTabla">Edad</th>
+                        <th name="tablaTurno">Turno</th>
+                        <th>Mostrar</th>
+                        <th>Eliminar</th>
+                    </thead>    
+                    <tbody id="cuerpo">
+    
+                    </tbody>
+                </table>
+                <!-- Tabla para Filtrar -->
+                <table id="tabla2" hidden=true>
+                    <thead>
+                        <th name="idTabla">Legajo</th>
+                        <th name="nombreTabla">Nombre</th>
+                        <th name="apellidoTabla">Apellido</th>
+                        <th name="edadTabla">Edad</th>
+                        <th name="sexoTabla">Truno</th>
+                        <th>Mostrar</th>
+                        <th>Eliminar</th>
+                    </thead>
+                    <tbody id="cuerpo">
+                                        
+                    </tbody>
+                </table>
+            </div>
+        </div> 
+
+    </body>
+</html>

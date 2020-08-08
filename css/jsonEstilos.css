@@ -1,0 +1,357 @@
+.contenedor{
+    width: 50%;
+    /*margin: auto;*/ /*Lo centra en la pantalla */
+    position: fixed;
+    bottom: 25%;
+    right: 25%;
+    border-radius: 5%;
+    background-color: rgb(210, 226, 139);
+    padding: 20px;
+    animation-name: aparecer;
+    animation-duration: 4s;
+    /*         ancho alto radio_som radio_pro color/opc */
+    box-shadow: 19px 10px 20px 0px rgba(0,0,0,0.40);
+    /* cambio los valores a 20px 20px 10px 0px*/
+    /*-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;*/
+    /*
+    box-sizing: border-box; /* Todo lo extra se consume para adentro del componente */
+}
+@keyframes aparecer{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+.bCerrar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /*
+    background-color:  yellow;
+    height: 80px;
+    */
+}
+.tituloH2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+}
+.cerrar{
+    background-color: red;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=text],input[type=number],input[type=date]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    
+    border-radius: 4px;
+    box-sizing: border-box; /*Hace crecer el componente para que no se rompa*/
+}
+#tipoPajaro{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.inputBuscador{
+    width: 10%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=button]{
+    width: 30%;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8 0;
+    border: none;
+    cursor: pointer;
+}
+
+input[type = button]:hover{
+    background-color: salmon;
+}
+#btnElininar{
+    background-color: #e62c14;
+}
+input[type=reset]{
+    width: 30%;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 0 0;
+    border: none;
+    cursor: pointer;
+}
+
+input[type = reset]:hover{
+    background-color: salmon;
+}
+#btnPromedio,#TurnoFiltro,#btnLimpiar{
+    width: 55%;
+    background-color: #dad726;
+    color: rgb(15, 14, 14);
+    padding: 14px 20px;
+    margin: 8 0;
+    border: 1;
+    cursor: pointer;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items: flex-start;
+}
+#btnAbrirCliente,#btnLimpiar{
+    width: 30%;
+    background-color: #dad726;
+    color: rgb(15, 14, 14);
+    padding: 14px 20px;
+    margin: 8 0;
+    border: 1;
+    cursor: pointer;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items: flex-start;
+}
+
+#btnEliminar,#btnModificar{
+    width:100%;
+    background-color: #dad726;
+    color: rgb(15, 14, 14);
+    cursor: pointer;
+}
+#btnGuardarCliente{
+    width: 30%;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8 0;
+    border: none;
+    cursor: pointer;
+}
+
+#btnLimpiarCliente{
+    width: 30%;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8 0;
+    border: none;
+    cursor: pointer;
+}
+.sinError{
+    border: 1px solid #cccccc;
+}
+
+.error{
+    border: 1px solid red;
+}
+
+.contenedorPrincipalTabla{
+    width: 80%;
+    /*margin: auto;*/ /*Lo centra en la pantalla */
+    position: absolute;
+    bottom: 25%;
+    right: 25%;
+    border: 1;
+}
+.contenedorTabla{
+    position: relative;
+}
+
+#contenedor1 {
+    display: flex;
+    background-color: #ddd;
+    height: 10vh;
+    top: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#contenedor2 {
+    display: flex;
+    background-color: rgb(170, 216, 170);
+    height: 10vh;
+    top: 20px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+*,*:after, *:before{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+#contenedor_carga{
+    background-color: rgba(250,240,2450,0.9);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index: 10000;
+}
+
+#carga{
+    border: 15px solid #ccc;
+    border-top-color: #F4266A;
+    border-top-style: groove;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-animation: girar 1.5s linear infinite;
+    -o-animation: girar 1.5s linear infinite;
+    animation: girar 1.5s linear infinite;
+}
+
+@keyframes girar{
+    from { transform: rotate(0deg);}
+    to { transform: rotate(360deg);}
+}
+
+.contenedorTabla{
+    width: 70%;
+    margin: auto; /*Lo centra en la pantalla */
+    position: fixed;
+    bottom: 55%;
+    right: 15%;
+    border-radius: 5%;
+    background-color: rgb(194, 182, 20);
+    padding: 20px;
+    animation-name: aparecer;
+    animation-duration: 4s;
+    /*         ancho alto radio_som radio_pro color/opc */
+    box-shadow: 19px 10px 20px 0px rgba(0,0,0,0.40);
+}
+
+.contenedorTitulo {
+    border: 1px solid rgb(9, 10, 9);
+    display: flex;
+    background-color: rgb(214, 202, 38);
+}
+.tituloH2{
+    flex: initial;
+    border: 0 ;/*1px solid rgb(5, 2, 7);*/
+    width: 350px;
+    min-width: 100px;
+    /*background-color: rgb(187, 184, 25);*/
+}
+.Seleccion1{
+    flex: none;
+    border: 0; /*3px solid rgb(0, 0, 0);*/
+    width: 400px;
+    /*background-color: rgb(187, 184, 25);*/
+}
+.contenedorBuscador {
+    /*flex: none;*/
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    border: 0;  /*1px solid  rgb(0, 0, 0);*/
+    width: 150px;
+    /*background-color: rgb(187, 184, 25);*/
+}
+.flex1 {
+    flex: initial;
+    border: 0;/*3px solid rgb(5, 2, 7);*/
+    width: 350px;
+    min-width: 100px;
+    /*background-color: rgb(187, 184, 25);*/
+}
+.flex2 {
+    flex: initial;
+    border: 0; /*3px solid rgb(5, 2, 7);*/
+    width: 350px;
+    min-width: 50px;
+    /*background-color: rgb(187, 184, 25);*/
+    
+}
+
+#Bucador{
+    display: flex;
+    background-color: #ddd;
+    height: 10vh;
+    top: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.Bucadorhijo{
+    width:10%;  
+}
+
+/* tabla */
+
+tr:nth-child(even){
+    background-color: #4e6b6e;
+    color: white;
+}
+
+th{
+    background-color: rgb(17, 16, 14);
+    color: rgb(229, 230, 228);
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    border: 1px solid rgb(51, 5, 124);
+ }
+ th, td {
+    width: 25%;
+    text-align: center;
+    padding: 8px;
+    vertical-align: top;
+    border: 1px solid #000;
+    border-collapse: collapse;
+ }
+ td{
+    cursor: pointer;
+ }
+ /* Fin tabla*/
+ .padre {
+    background: rgba(20, 8, 6, 0.199);
+    height: 100%;
+    width: 50%;
+    /*IMPORTANTE*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hijo {
+    background: rgb(82, 138, 155);
+    width: 30%;
+    height: 98%;
+  }
